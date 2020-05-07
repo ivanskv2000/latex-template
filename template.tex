@@ -4,6 +4,7 @@
 \usepackage{cmap} % pdf text search 
 \usepackage{etoolbox} % logical operators
 \usepackage{extsizes} % 14pt font
+\usepackage{lastpage} % get last page number by \pageref{LastPage}
 
 \def\typeone{1} % English
 \def\typetwo{2} % Russian
@@ -68,11 +69,13 @@
 
 %%% Typography
 
-\usepackage{epigraph} % epigraphs
-\usepackage{lastpage} % get last page number by \pageref{LastPage}
 \usepackage{soul} % \so{letterspacing}, \ul{underlining}, \st{overstriking}, \hl{highlighting}
 \usepackage[all]{nowidow} % restrict widow and orphan lines
 \usepackage{csquotes} % quotation marks definition (for geeks)
+
+\usepackage{epigraph} % epigraphs
+\usepackage{footmisc} % footnote customization
+	\setlength{\footnotemargin}{1ex}
 \usepackage{multicol} % multicolumn environment
 \usepackage[%
 		colorlinks=false, linkcolor=Maroon, urlcolor=MidnightBlue, citecolor=PineGreen%
@@ -82,20 +85,20 @@
 %\usepackage[bottom=30mm, includeheadfoot]{geometry} 
 
 \usepackage{fancyhdr} % headers
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{\iffloatpage{0pt}{1pt}}  % header rule width
-%\lhead{}
-%\chead{}
-%\rhead{}
-%\lfoot{}
-%\cfoot{}
-%\rfoot{}
+	\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{\iffloatpage{0pt}{1pt}}  % header rule width
+%	\lhead{}
+%	\chead{}
+%	\rhead{}
+%	\lfoot{}
+%	\cfoot{}
+%	\rfoot{}
 
-%\renewcommand{\baselinestretch}{1.2} % line spacing
 \usepackage{setspace} % line spacing
-%\singlespacing % one
-\onehalfspacing % one-half
-%\doublespacing % two
+	%\singlespacing % one
+	\onehalfspacing % one-half
+	%\doublespacing % two
+	%\setstretch{1.5} % custom
 
 
 
