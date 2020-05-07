@@ -1,0 +1,125 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc} % input encoding
+\usepackage{cmap} % pdf text search 
+\usepackage{etoolbox} % logical operators
+\usepackage{extsizes} % 14pt font
+
+\def\typeone{1} % English
+\def\typetwo{2} % Russian
+
+\let\doctype=\typeone
+
+\ifcase\doctype
+\or   %matches \typeone
+		\usepackage[T1]{fontenc}
+		\usepackage[english]{babel}	
+\or % matches \typetwo
+		\usepackage[T2A]{fontenc}
+		\usepackage[english,russian]{babel}	
+		\usepackage{mathtext}
+		\usepackage{indentfirst}
+		\frenchspacing
+		\renewcommand{\geq}{\geqslant}
+		\renewcommand{\leq}{\leqslant}
+\fi
+
+
+
+%%% Maths
+
+\usepackage{amsfonts,amssymb,amsthm,mathtools} 
+\usepackage{amsmath} % AMS
+\usepackage{mathrsfs} % \mathscr{} calligraphic font
+\usepackage{icomma} % "intelligent" comma
+\usepackage{xfrac} % split-level fractions
+\usepackage{IEEEtrantools} % additional equation environments
+\usepackage{cancel} % cancelling
+%\mathtoolsset{showonlyrefs=true} % numerate only \eqref{}'ed formulas.
+
+
+
+%%% Graphics
+
+% \graphicspath{{photos/}{plots/}}  % specify folders with images
+\usepackage{graphicx}  % enhanced \includegraphics
+\usepackage{wrapfig} % text-wrapped figures
+\usepackage{rotating} % full-page floats with autorotation
+\setlength\intextsep{18pt} % space after floats
+\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor} % colors
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{tcolorbox} % color boxes
+\usepackage{pgfornament} % ornaments
+%\usepackage{smartdiagram} % diagrams
+
+
+
+%%% Tables
+
+\usepackage{array,tabularx,tabulary} % additional table environments
+\usepackage{booktabs} % beautiful tables
+\usepackage{longtable}  % long tables
+\usepackage{multirow} % multiple rows
+\usepackage{hhline} % double hlines
+
+
+
+%%% Typography
+
+\usepackage{epigraph} % epigraphs
+\usepackage{lastpage} % get last page number by \pageref{LastPage}
+\usepackage{soul} % \so{letterspacing}, \ul{underlining}, \st{overstriking}, \hl{highlighting}
+\usepackage[all]{nowidow} % restrict widow and orphan lines
+\usepackage{csquotes} % quotation marks definition (for geeks)
+\usepackage{multicol} % multicolumn environment
+\usepackage[%
+		colorlinks=false, linkcolor=Maroon, urlcolor=MidnightBlue, citecolor=PineGreen%
+]{hyperref} % links
+
+\usepackage{geometry}  % margins
+%\usepackage[bottom=30mm, includeheadfoot]{geometry} 
+
+\usepackage{fancyhdr} % headers
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{\iffloatpage{0pt}{1pt}}  % header rule width
+%\lhead{}
+%\chead{}
+%\rhead{}
+%\lfoot{}
+%\cfoot{}
+%\rfoot{}
+
+%\renewcommand{\baselinestretch}{1.2} % line spacing
+\usepackage{setspace} % line spacing
+%\singlespacing % one
+\onehalfspacing % one-half
+%\doublespacing % two
+
+
+
+%%% Fonts
+
+\renewcommand{\rmfamily}{\usefont{T1}{bch}{m}{n}\selectfont}
+\renewcommand{\sffamily}{\usefont{T1}{qag}{m}{n}\selectfont}
+
+\renewcommand\familydefault{\sfdefault}
+
+
+
+%%% Bibliography
+
+\usepackage[style=apa, mincitenames=1, maxcitenames=2, backend=biber, sorting=nty, bibencoding=utf8]{biblatex} 
+%\addbibresource{citations.bib}
+%\renewcommand{\mkbibnamefamily}[1]{\textsc{#1}} % small caps names
+
+
+
+
+\title{2}
+\author{Ivan Skvortsov}
+\begin{document}
+	\maketitle
+	
+\end{document}
