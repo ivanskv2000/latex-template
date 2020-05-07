@@ -73,9 +73,17 @@
 \usepackage[all]{nowidow} % restrict widow and orphan lines
 \usepackage{csquotes} % quotation marks definition (for geeks)
 
+\usepackage{setspace} % line spacing
+%\singlespacing % one
+\onehalfspacing % one-half
+%\doublespacing % two
+%\setstretch{1.5} % custom
+
 \usepackage{epigraph} % epigraphs
 \usepackage{footmisc} % footnote customization
-	\setlength{\footnotemargin}{1ex}
+	\setlength{\footnotemargin}{2ex}
+	\renewcommand{\footnotelayout}{\setstretch{1.2}} 
+\usepackage{fnpct} % footnote kerning (punctuation AFTER footnote!)
 \usepackage{multicol} % multicolumn environment
 \usepackage[%
 		colorlinks=false, linkcolor=Maroon, urlcolor=MidnightBlue, citecolor=PineGreen%
@@ -93,12 +101,6 @@
 %	\lfoot{}
 %	\cfoot{}
 %	\rfoot{}
-
-\usepackage{setspace} % line spacing
-	%\singlespacing % one
-	\onehalfspacing % one-half
-	%\doublespacing % two
-	%\setstretch{1.5} % custom
 
 
 
