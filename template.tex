@@ -36,6 +36,7 @@
 \usepackage{xfrac} % split-level fractions
 \usepackage{IEEEtrantools} % additional equation environments
 \usepackage{cancel} % cancelling
+\usepackage[short]{optidef} % optimization problems
 %\mathtoolsset{showonlyrefs=true} % numerate only \eqref{}'ed formulas.
 
 
@@ -69,6 +70,7 @@
 
 %%% Typography
 
+\usepackage{microtype} % micro-typographic features
 \usepackage{soul} % \so{letterspacing}, \ul{underlining}, \st{overstriking}, \hl{highlighting}
 \usepackage[all]{nowidow} % restrict widow and orphan lines
 \usepackage{csquotes} % quotation marks definition (for geeks)
@@ -86,7 +88,7 @@
 \usepackage{fnpct} % footnote kerning (punctuation AFTER footnote!)
 \usepackage{multicol} % multicolumn environment
 \usepackage[%
-		colorlinks=false, linkcolor=Maroon, urlcolor=MidnightBlue, citecolor=PineGreen%
+		colorlinks=false, linkcolor=Maroon, urlcolor=MidnightBlue, citecolor=PineGreen, hyperfootnotes=false%
 ]{hyperref} % links
 
 \usepackage{geometry}  % margins
@@ -117,7 +119,9 @@
 
 \usepackage[style=apa, mincitenames=1, maxcitenames=2, backend=biber, sorting=nty, bibencoding=utf8]{biblatex} 
 %\addbibresource{citations.bib}
-%\renewcommand{\mkbibnamefamily}[1]{\textsc{#1}} % small caps names
+%\renewcommand{\mkbibnamefamily}[1]{\textsc{#1}} % small caps author names
+
+\usepackage{cleveref} % smart references
 
 
 
