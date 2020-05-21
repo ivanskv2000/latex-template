@@ -1,28 +1,37 @@
 \documentclass[a4paper,12pt]{article}
 
+\edef\lang{\detokenize{%
+		english % choose language: english or russian
+}}
+\edef\build{\detokenize{%
+		pdflatex % choose your compiler: pdflatex or xelatex
+	}}
+
+\edef\macroeng{\detokenize{english}}
+\edef\macrorus{\detokenize{russian}}
+
+\edef\macropdf{\detokenize{pdflatex}}
+\edef\macroxe{\detokenize{xelatex}}
+
 \usepackage[utf8]{inputenc} % input encoding
 \usepackage{cmap} % pdf text search 
 \usepackage{etoolbox} % logical operators
 \usepackage{extsizes} % 14pt font
 \usepackage{lastpage} % get last page number by \pageref{LastPage}
 
-\def\typeone{1} % English
-\def\typetwo{2} % Russian
-
-\let\doctype=\typeone
-
-\ifcase\doctype
-\or   %matches \typeone
-		\usepackage[T1]{fontenc}
-		\usepackage[english]{babel}	
-\or % matches \typetwo
-		\usepackage[T2A]{fontenc}
-		\usepackage[english,russian]{babel}	
-		\usepackage{mathtext}
-		\usepackage{indentfirst}
-		\frenchspacing
-		\renewcommand{\geq}{\geqslant}
-		\renewcommand{\leq}{\leqslant}
+\ifx\macroeng\lang
+	\usepackage[T1]{fontenc}
+	\usepackage[english]{babel}	
+\fi
+\ifx\macrorus\lang
+	\usepackage[T2A]{fontenc}
+	\usepackage[english,russian]{babel}	
+	\usepackage{mathtext}
+	\usepackage{indentfirst}
+	\frenchspacing
+	\renewcommand{\geq}{\geqslant}
+	\renewcommand{\leq}{\leqslant}
+	\renewcommand{\epsilon}{\varepsilon}
 \fi
 
 
@@ -65,6 +74,7 @@
 \usepackage{longtable}  % long tables
 \usepackage{multirow} % multiple rows
 \usepackage{hhline} % double hlines
+\renewcommand{\arraystretch}{1.2} % row spacing
 
 
 
